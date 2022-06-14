@@ -9,6 +9,7 @@ export default function List() {
   const ActionController = bindActionCreators(actionCreators, dispatch);
   return (
     <ListStyled>
+      <h1>List of Notes</h1>
       {note.todos.map((note) => (
         <div className="lists">
           <h6>{note.id}</h6>
@@ -21,7 +22,20 @@ export default function List() {
           >
             Delete
           </button>
-          <button>Update</button>
+          {/* <button
+            onClick={() =>
+              ActionController.updateNote({
+                index: 0,
+                data: {
+                  id: 5,
+                  title: "Woynshet",
+                  content: "A nice programmer",
+                },
+              })
+            }
+          >
+            Update
+          </button> */}
         </div>
       ))}
     </ListStyled>

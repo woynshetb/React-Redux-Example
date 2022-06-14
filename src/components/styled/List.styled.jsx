@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const ListStyled = styled.section`
+width:50% ;
 div {
    background-color:aliceblue ;
    display:flex ;

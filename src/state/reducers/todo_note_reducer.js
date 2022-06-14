@@ -1,5 +1,11 @@
 const initalData = {
-  todos: [],
+  todos: [
+    {
+      id: "1",
+      title: "Hello World",
+      content: "this is inital Content",
+    },
+  ],
 };
 
 const reducer = (state = initalData, action) => {

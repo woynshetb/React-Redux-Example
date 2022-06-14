@@ -14,6 +14,7 @@ export default function Add() {
   const ActionController = bindActionCreators(actionCreators, dispatch);
   return (
     <AddStyled>
+      <h1>Add Note </h1>
       <form>
         <label>
           Enter Id:
@@ -39,18 +40,18 @@ export default function Add() {
             onChange={(e) => setContent(e.target.value)}
           />
         </label>
-        <button
-          onClick={() =>
-            ActionController.createNote({
-              id: id,
-              title: title,
-              content: content,
-            })
-          }
-        >
-          Submit
-        </button>
       </form>
+      <button
+        onClick={() => {
+          ActionController.createNote({
+            id: id,
+            title: title,
+            content: content,
+          });
+        }}
+      >
+        Submit
+      </button>
     </AddStyled>
   );
 }
